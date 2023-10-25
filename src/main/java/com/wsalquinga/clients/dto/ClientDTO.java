@@ -8,7 +8,7 @@ import lombok.Data;
  * @author wsalquinga on 24/10/2023
  */
 @Data
-public class ClientDto {
+public class ClientDTO {
 
     private Integer id;
 
