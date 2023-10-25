@@ -56,7 +56,7 @@ public class Client {
     }
 
     public void buildFullName() {
-        this.fullname = this.name + this.lastname;
+        this.fullname = this.name + " " + this.lastname;
     }
 
     @Override
