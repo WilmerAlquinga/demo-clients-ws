@@ -38,13 +38,13 @@ public class Client {
     @Column(name = "address", length = 120)
     private String address;
 
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at", nullable = false)
+    @Column(name = "updated_at", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDateTime updatedAt;
 
-    @Column(name = "deleted_at")
+    @Column(name = "deleted_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime deletedAt;
 
     @PrePersist
@@ -52,6 +52,10 @@ public class Client {
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
         this.deletedAt = null;
+        this.buildFullName();
+    }
+
+    public void buildFullName() {
         this.fullname = this.name + this.lastname;
     }
 
@@ -60,7 +64,7 @@ public class Client {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
-        return id == client.id;
+        return Objects.equals(id, client.id);
     }
 
     @Override
