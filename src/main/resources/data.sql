@@ -1,6 +1,6 @@
 create table client
 (
-    id         int      not null auto_increment,
+    id         int          not null auto_increment,
     created_at TIMESTAMP    not null,
     deleted_at TIMESTAMP    null,
     updated_at TIMESTAMP    not null,

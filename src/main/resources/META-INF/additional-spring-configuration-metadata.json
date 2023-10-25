@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "wsalquinga.openapi.dev-url",
+      "type": "java.lang.String",
+      "description": "Description for wsalquinga.openapi.dev-url."
+  }
+] }
