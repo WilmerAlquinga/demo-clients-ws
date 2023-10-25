@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @author wsalquinga on 24/10/2023
  */
 @Repository
-public interface ClientRepository extends JpaRepository<Integer, Client> {
+public interface ClientRepository extends JpaRepository<Client, Integer> {
 }
